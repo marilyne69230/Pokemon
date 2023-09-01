@@ -10,6 +10,7 @@ export class CardComponent {
 
   title: string = 'pokemon-app';
   pokemonList: PokemonClass[] = POKEMONS;
+  pokemonSelected: PokemonClass;
   
   
   ngOnInit(): void {
@@ -23,7 +24,11 @@ export class CardComponent {
   
     selectPokemon(pokemon: PokemonClass): void {
       // afficher le nom du pokemon
-      console.log("Vous avez sélectionné ce pokémon : " + pokemon['name'])
+      console.log("Vous avez sélectionné ce pokémon : " + pokemon['name']);
 
+    }
+    afficheNumberPokemon(index: number) {
+      this.pokemonSelected = this.pokemonList[index-1];
+    console.log('Vous avez recherchez ' + this.pokemonSelected.name);
     }
 }
