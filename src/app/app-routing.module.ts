@@ -5,7 +5,7 @@ import { ArticleComponent } from './article/article.component';
 
 // ajoouter toutes les urls
 const routes: Routes = [
-  // path c apres ip le / 
+  // path c apres ip le / et component c le nom du component qu'on a créer
   {path: '', component: HomeComponent},
   {path: 'article', component: ArticleComponent}
 ];
