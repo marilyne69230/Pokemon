@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { CardComponent } from './card/card.component';
 import { HomeComponent } from './home/home.component';
 import { ArticleComponent } from './article/article.component';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
 // ajouter les autres component à la suite
 
 @NgModule({
@@ -13,7 +14,8 @@ import { ArticleComponent } from './article/article.component';
     AppComponent,
     CardComponent,
     HomeComponent,
-    ArticleComponent
+    ArticleComponent,
+    NavBarComponent
   ],
   // dépendances externe
   imports: [

@@ -1,30 +1,13 @@
 <!-- CE QUI VA SE CHARGER SUR TOUTES LES PAGES -->
 
-<nav class="navbar navbar-expand-lg bg-light mb-5">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Liste des pokémons</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/article">Article</a>
-        </li>
-      </ul> 
-    </div>
-  </div>
-</nav>
+<app-nav-bar></app-nav-bar>
 
 <!-- afficher les pages selon l'url -->
 <router-outlet>
 
 </router-outlet>
 
-<footer class="bg-light text-center text-lg-start">
+<footer class="bg-light text-center text-lg-start mt-5">
   <!-- Copyright -->
   <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
     © 2020 Copyright:
