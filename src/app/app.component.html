@@ -1,0 +1,18 @@
+<h1 class="p-5 text-center">Liste des pokémons</h1>
+
+
+
+<!-- boucle pour afficher tous les pokemons -->
+<div class="container card-group d-flex justify-content-center">
+
+  <div *ngFor="let pokemon of pokemonList" class="test col-3">
+    
+    <div class="card">
+      <img src="{{pokemon.picture}}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title text-center">{{ pokemon.name}}</h5>
+        <p class="card-text">Crée le : <br> {{pokemon.created}}</p>
+      </div>
+    </div>  
+  </div>
+</div>
