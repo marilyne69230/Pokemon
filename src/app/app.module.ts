@@ -15,7 +15,7 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
     CardComponent,
     HomeComponent,
     ArticleComponent,
-    NavBarComponent
+    NavBarComponent,
   ],
   // dépendances externe
   imports: [

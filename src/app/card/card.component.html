@@ -1,20 +1,22 @@
 <!-- boucle pour afficher tous les pokemons -->
 <div class="container card-group">
 
+  <div class="input-group mb-3">
     <input class="container"
-    #input
-    (keyup)="afficheNumberPokemon(+input.value)"
-    type="Pokemon"
+       #input
+       (keyup.enter)="selectPokemon(+input.value)"
+       type="number"
     >
+  </div> 
 
     <div *ngFor="let pokemon of pokemonList" class="test col-3">
       
-      <div class="card m-1 border border-4">  
-        <img (click)="selectPokemon(pokemon)" src="{{pokemon.picture}}" class="card-img-top" alt="...">
+      <div class="card m-1 border border-4" (click)="selectPokemon(pokemon.id)">  
+        <img src="{{pokemon.picture}}" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title text-center">{{ pokemon.name}}</h5>
           <p class="card-text">Crée le : <br> {{pokemon.created}}</p>
         </div>
       </div>  
     </div>
-  </div>
+</div>

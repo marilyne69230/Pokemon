@@ -1,6 +1,10 @@
 <h1 class="text-center mb-5">Article des pokémons</h1>
 
-<!-- #input pour créer une variable typescript -->
+<!-- 
+    #input : permet d'accéder au code angular
+    (kepup.enter) : quand la touche enfoncée est entrée, on appelle la fonction resultForm
+    type : s'attend à recevoir uenchaine de caractère
+-->
 <input class="container"
     #input
     (keyup.enter)="resultForm(input.value)"

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { PokemonClass } from '../pokemons';
+import { Pokemon } from '../pokemons';
 import { POKEMONS } from '../mock-pokemons-list';
+import { PokemonService } from '../pokemon.service';
 
 @Component({
   selector: 'app-card',
@@ -8,27 +9,37 @@ import { POKEMONS } from '../mock-pokemons-list';
 })
 export class CardComponent {
 
+  constructor(
+    private service:PokemonService,
+  ){}
+
   title: string = 'pokemon-app';
-  pokemonList: PokemonClass[] = POKEMONS;
-  pokemonSelected: PokemonClass;
-  
-  
-  ngOnInit(): void {
-    console.log("Je viens de charger")
-    // comme console.log mais afficher sous forme de tableau
-    console.table(this.pokemonList);
+  pokemonList: Pokemon[] = POKEMONS;
+  pokemonListService:Pokemon[]= [];
+  index: number = Math.floor(Math.random() * 12);
 
-
-    this.selectPokemon(this.pokemonList[0]);
+  getPokemon(){
+    this.pokemonListService = this.service.fetchAllPokemon();
+    return this.pokemonListService;
   }
-  
-    selectPokemon(pokemon: PokemonClass): void {
-      // afficher le nom du pokemon
-      console.log("Vous avez sélectionné ce pokémon : " + pokemon['name']);
 
+  ngOnInit(): void {
+    console.log("C'est moi wsh");
+    console.table(this.pokemonList);
+    console.log(this.getPokemon());
+  }
+
+  selectPokemon(form: number): void{
+    if(form > this.pokemonList.length || form < 1){
+      console.log("Il n existe pas !");
+    }else{
+      console.log("Vous avez selectionner : "+ this.pokemonList[form-1].name);
     }
-    afficheNumberPokemon(index: number) {
-      this.pokemonSelected = this.pokemonList[index-1];
-    console.log('Vous avez recherchez ' + this.pokemonSelected.name);
-    }
+  }
+
+  cliquePokemon(id:number):void{
+    console.log("Vous avez selectionner : "+ this.pokemonList[id-1].name);
+  }
+
+
 }

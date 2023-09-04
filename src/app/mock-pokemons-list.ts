@@ -1,7 +1,7 @@
-import { PokemonClass } from './pokemons';
+import { Pokemon } from './pokemons';
 
  
-export const POKEMONS: PokemonClass[] = [
+export const POKEMONS: Pokemon[] = [
     {
         id: 1,
         name: "Bulbizarre",
