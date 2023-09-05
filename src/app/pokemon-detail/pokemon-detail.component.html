@@ -1,0 +1,21 @@
+<div class="card mb-3 col-6 mx-auto border border-5" >
+    <div *ngIf="pokemon">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="{{ pokemon.picture }}" class="img-thumbnail m-3" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+                <ul class="list-group">
+                    <li class="text-center list-group-item list-group-item list-group-item-primary fw-bold">{{ pokemon.name }}</li>
+                    <li class="list-group-item">HP : {{ pokemon.hp }}</li>
+                    <li class="list-group-item">CP : {{ pokemon.cp }}</li>
+                    <li class="list-group-item">Types : {{ pokemon.types }}</li>
+                    <li class="list-group-item">Crée le : {{pokemon.created |  date: 'dd/MM/yy,  HH:mm'}}</li>
+                  </ul>
+
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>

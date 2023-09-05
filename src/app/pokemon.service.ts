@@ -11,4 +11,8 @@ export class PokemonService {
   fetchAllPokemon(){
     return POKEMONS;
   }
+
+  fetchById(id:number){
+    return POKEMONS[id];
+  }
 }
