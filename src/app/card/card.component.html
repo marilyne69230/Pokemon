@@ -15,7 +15,7 @@
         <img src="{{pokemon.picture}}" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title text-center">{{ pokemon.name}}</h5>
-          <p class="card-text">Crée le : <br> {{pokemon.created}}</p>
+          <p class="card-text">Crée le : {{pokemon.created | date: 'longDate' }}</p>
         </div>
         <a routerLink="{{pokemon.id}}" class="btn btn-primary w-50 mx-auto mb-2">Voir le détail</a>
       </div>  

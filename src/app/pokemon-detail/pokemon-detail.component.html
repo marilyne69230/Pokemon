@@ -8,10 +8,10 @@
             <div class="card-body">
                 <ul class="list-group">
                     <li class="text-center list-group-item list-group-item list-group-item-primary fw-bold">{{ pokemon.name }}</li>
-                    <li class="list-group-item">HP : {{ pokemon.hp }}</li>
-                    <li class="list-group-item">CP : {{ pokemon.cp }}</li>
-                    <li class="list-group-item">Types : {{ pokemon.types }}</li>
-                    <li class="list-group-item">Crée le : {{pokemon.created |  date: 'dd/MM/yy,  HH:mm'}}</li>
+                    <li class="list-group-item"><strong>HP :</strong> {{ pokemon.hp }}</li>
+                    <li class="list-group-item"><strong>CP :</strong> {{ pokemon.cp }}</li>
+                    <li class="list-group-item"><strong>Types :</strong> {{ pokemon.types }}</li>
+                    <li class="list-group-item"><strong>Crée le :</strong> {{pokemon.created | date: 'longDate' }}</li>
                   </ul>
 
             </div>
