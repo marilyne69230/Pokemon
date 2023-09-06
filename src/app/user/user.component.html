@@ -1,0 +1,15 @@
+<h1 class="text-center m-5">Liste des utilisateurs</h1>
+
+<div class="card-group d-flex justify-content-center">
+
+    <div *ngFor="let user of users">
+        <div class="card m-2" style="width: 18rem;">
+            <img src="https://cdn-icons-png.flaticon.com/512/6596/6596121.png" width="100px" alt="avatar">
+            <div class="card-body">
+              <h5 class="card-title">{{user.name}}</h5>
+              
+              <a routerLink="" class="btn btn-primary">Voir détails</a>
+            </div>
+        </div>
+    </div>
+</div>

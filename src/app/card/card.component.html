@@ -17,7 +17,7 @@
           <h5 class="card-title text-center">{{ pokemon.name}}</h5>
           <p class="card-text">Crée le : {{pokemon.created | date: 'longDate' }}</p>
         </div>
-        <a routerLink="{{pokemon.id}}" class="btn btn-primary w-50 mx-auto mb-2">Voir le détail</a>
+        <a routerLink="pokemon/{{pokemon.id}}" class="btn btn-primary w-50 mx-auto mb-2">Voir le détail</a>
       </div>  
     </div>
 </div>

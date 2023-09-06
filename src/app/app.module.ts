@@ -14,6 +14,8 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { Error404Component } from './error404/error404.component';
 import { PokemonDetailComponent } from './pokemon-detail/pokemon-detail.component';
 import { UserComponent } from './user/user.component';
+import { HttpClientModule } from '@angular/common/http';
+import { UserDetailComponent } from './user-detail/user-detail.component';
 // ajouter les autres component à la suite
 
 @NgModule({
@@ -26,11 +28,13 @@ import { UserComponent } from './user/user.component';
     Error404Component,
     PokemonDetailComponent,
     UserComponent,
+    UserDetailComponent
   ],
   // dépendances externe
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [
     { provide: LOCALE_ID, useValue: 'fr-FR'}
