@@ -9,6 +9,8 @@ import { Iuser } from '../Iuser';
 })
 export class UserComponent implements OnInit{
 
+  parentUser : Iuser|undefined;
+
   constructor(private service:UserService){}
 
   users:Iuser[] = []
