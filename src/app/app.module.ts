@@ -13,6 +13,7 @@ import { ArticleComponent } from './article/article.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { Error404Component } from './error404/error404.component';
 import { PokemonDetailComponent } from './pokemon-detail/pokemon-detail.component';
+import { UserComponent } from './user/user.component';
 // ajouter les autres component à la suite
 
 @NgModule({
@@ -24,6 +25,7 @@ import { PokemonDetailComponent } from './pokemon-detail/pokemon-detail.componen
     NavBarComponent,
     Error404Component,
     PokemonDetailComponent,
+    UserComponent,
   ],
   // dépendances externe
   imports: [
