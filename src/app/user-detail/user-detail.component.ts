@@ -1,5 +1,7 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Iuser } from '../Iuser';
+import { UserService } from '../user.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-user-detail',
@@ -8,4 +10,16 @@ import { Iuser } from '../Iuser';
 export class UserDetailComponent {
 
   @Input() userC: Iuser|undefined;
+
+  selectAddUser: Iuser|undefined;
+
+  constructor(
+    private service:UserService,
+    private router:ActivatedRoute
+  ){}
+
+  ngOnInit(){
+
+    }
+
 }

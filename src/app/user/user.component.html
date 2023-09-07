@@ -10,7 +10,8 @@
             <div class="card-body">
               <h5 class="card-title">{{user.name}}</h5>
               
-              <button (click)="selectUser(user)" class="btn btn-primary">Voir détails</button>
+              <button (click)="selectUser(user)" class="btn btn-primary">Détails</button>
+              <button routerLink="{{user.id}}" class="btn btn-primary mx-2">Ouvrir</button>
             </div>
         </div>
     </div>

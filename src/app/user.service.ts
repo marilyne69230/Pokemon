@@ -14,4 +14,8 @@ export class UserService {
   fetchAll() {
     return this.http.get<Iuser[]>(this.url);
   }
+
+  fetchById(id: number) {
+    return this.http.get<Iuser[]>(this.url);
+  }
 }

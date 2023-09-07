@@ -16,6 +16,7 @@ import { PokemonDetailComponent } from './pokemon-detail/pokemon-detail.componen
 import { UserComponent } from './user/user.component';
 import { HttpClientModule } from '@angular/common/http';
 import { UserDetailComponent } from './user-detail/user-detail.component';
+import { ContactComponent } from './contact/contact.component';
 // ajouter les autres component à la suite
 
 @NgModule({
@@ -28,7 +29,8 @@ import { UserDetailComponent } from './user-detail/user-detail.component';
     Error404Component,
     PokemonDetailComponent,
     UserComponent,
-    UserDetailComponent
+    UserDetailComponent,
+    ContactComponent
   ],
   // dépendances externe
   imports: [
